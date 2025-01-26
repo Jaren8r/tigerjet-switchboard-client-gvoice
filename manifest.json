@@ -1,0 +1,31 @@
+{
+    "name": "TigerJet Switchboard Client for Google Voice",
+    "version": "1.0",
+    "manifest_version": 3,
+    "content_scripts": [
+        {
+            "js": [
+                "gvoice.js"
+            ],
+            "matches": [
+                "https://voice.google.com/*"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "gvoice_page.js"
+            ],
+            "matches": [
+                "https://voice.google.com/*"
+            ]
+        }
+    ],
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
+    "permissions": ["storage"]
+}
